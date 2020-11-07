@@ -1,0 +1,47 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+@import '../../utilities/variables/variables';
+
+.container {
+    padding: 0 10px;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 10px;
+  }
+  
+  [class^=col] {
+    margin-top: 10px;
+    flex-basis: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  $col-colors:  $color-col-1, 
+                $color-col-2,
+                $color-col-3,
+                $color-col-4,
+                $color-col-5,
+                $color-col-6,
+                $color-col-7,
+                $color-col-8,
+                $color-col-9,
+                $color-col-10,
+                $color-col-11,
+                $color-col-12;
+
+  @each $col in $col-colors {
+    .theme.col-#{$col} {
+      background-color: $col;
+    }
+  }
+
+
+  .card {
+    flex-basis: 100%;
+  }
+  
